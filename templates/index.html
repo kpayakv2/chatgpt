@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="th">
+<head>
+    <meta charset="utf-8">
+    <title>ระบบบันทึกการซ่อมบำรุง</title>
+</head>
+<body>
+    <h1>บันทึกการซ่อมบำรุง</h1>
+    <a href="{{ url_for('add_log') }}">เพิ่มรายการ</a>
+    <ul>
+    {% for log in logs %}
+        <li>{{ log.date }} - {{ log.part }} ({{ log.mileage }} กม.)</li>
+        <p>{{ log.notes }}</p>
+    {% else %}
+        <li>ไม่มีข้อมูล</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
