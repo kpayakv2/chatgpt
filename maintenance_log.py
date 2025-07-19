@@ -39,35 +39,3 @@ def get_logs():
     )
     session.close()
     return logs
-requirements.txt
-ใหม่
-+2
--0
-
-Flask
-Flask-SQLAlchemy
-templates/add.html
-ใหม่
-+20
--0
-
-<!doctype html>
-<html lang="th">
-<head>
-    <meta charset="utf-8">
-    <title>เพิ่มรายการซ่อมบำรุง</title>
-</head>
-<body>
-    <h1>เพิ่มรายการซ่อมบำรุง</h1>
-    <form method="post">
-        <label for="part">ชิ้นส่วน:</label>
-        <input type="text" name="part" id="part" required><br>
-        <label for="mileage">ระยะทาง:</label>
-        <input type="number" name="mileage" id="mileage"><br>
-        <label for="notes">หมายเหตุ:</label>
-        <textarea name="notes" id="notes"></textarea><br>
-        <button type="submit">บันทึก</button>
-    </form>
-    <a href="{{ url_for('index') }}">กลับหน้าหลัก</a>
-</body>
-</html>
